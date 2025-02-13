@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code WEST LODI</title>
+    
+    <!-- Libreria per generare il QR Code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <!-- Link al logo di Instagram (Icone) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        body {
+            text-align: center;
+            background-image: url('background.jpg'); /* Immagine di sfondo */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        #qrcode {
+            margin: 20px auto;
+            width: 200px;
+            height: 200px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .instagram-btn {
+            background-color: #f7f7f7;
+            border-radius: 50%;
+            margin: 10px;
+            padding: 15px;
+            font-size: 24px;
+            color: #e1306c;
+            transition: transform 0.3s ease;
+        }
+        .instagram-btn:hover {
+            transform: scale(1.2);
+        }
+        .link-container {
+            margin-top: 30px;
+        }
+        .link-container a {
+            color: #f39c12;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Il Mio QR Code Fisso</h2>
+    <div id="qrcode"></div> <!-- Qui verrà generato il QR Code -->
+
+    <h3>Riproduci Audio</h3>
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        <source src="POSSE V4.wav" type="audio/wav">
+        <source src="audio.ogg" type="audio/ogg">
+        Il tuo browser non supporta l'audio.
+    </audio>
+
+    <div class="button-container">
+        <!-- Bottoni Instagram -->
+        <a href="https://https://www.instagram.com/prod.3r1" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/sssorda_" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/yntr0" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/manuel.mp5" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/_.gi0gi0" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/tatiana_zanca" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/dwmenico" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/albaonthebeat" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <div class="link-container">
+        <p>Visita la pagina cliccando sul link qui sotto:</p>
+        <a href="https://Fabri115.github.io/qrcode-page/qrcode_audio_testo_sfondo.html" target="_blank">Apri la mia pagina</a>
+    </div>
+
+    <script>
+        // Genera il QR Code fisso
+        new QRCode(document.getElementById("qrcode"), {
+            text: "https://Fabri115.github.io/qrcode-page/qrcode_audio_testo_sfondo.html",  // Sostituisci con il tuo link fisso
+            width: 200,
+            height: 200
+        });
+    </script>
+
+</body>
+</html>
