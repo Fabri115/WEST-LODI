@@ -12,29 +12,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <style>
-        /* Impedire lo scrolling e fissare la larghezza e l'altezza */
         html, body {
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Disabilita lo scroll */
-            height: 100%; /* Imposta altezza al 100% */
-            width: 100%; /* Imposta larghezza al 100% */
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
         }
         
         body {
             text-align: center;
-            background-image: url('Started From The Bottom.jpg'); /* Immagine di sfondo */
+            background-image: url('Started From The Bottom.jpg');
             background-size: cover;
             background-position: center;
             color: white;
             font-family: Arial, sans-serif;
-            padding: 20px;
             display: flex;
             justify-content: center;
             flex-direction: column;
             align-items: center;
-            min-height: 100vh; /* Aggiungi altezza minima */
-            box-sizing: border-box; /* Per includere padding e border nella larghezza e altezza */
+            min-height: 100vh;
+            box-sizing: border-box;
         }
         #qrcode {
             margin: 20px auto;
@@ -49,13 +47,17 @@
         }
         .button-container {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             margin-top: 30px;
+        }
+        .instagram-item {
+            text-align: center;
+            margin: 10px;
         }
         .instagram-btn {
             background-color: #f7f7f7;
             border-radius: 50%;
-            margin: 10px;
             padding: 15px;
             font-size: 24px;
             color: #e1306c;
@@ -63,6 +65,20 @@
         }
         .instagram-btn:hover {
             transform: scale(1.2);
+        }
+        .download-btn, .copy-btn {
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .download-btn:hover, .copy-btn:hover {
+            background-color: #d68910;
         }
         .link-container {
             margin-top: 30px;
@@ -73,7 +89,6 @@
             font-weight: bold;
             font-size: 18px;
         }
-
     </style>
 </head>
 <body>
@@ -92,38 +107,37 @@
     <div class="button-container">
         <!-- Bottoni Instagram -->
         <div class="instagram-item">
-        <a href="https://www.instagram.com/prod.3r1" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
-        <p class="instagram-name">3r1</p>
+            <a href="https://www.instagram.com/prod.3r1" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
+            <p class="instagram-name">3r1</p>
         </div>
         <div class="instagram-item">
-        <a href="https://www.instagram.com/sssorda_" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
-        <p class="instagram-name">Sorda</p>
+            <a href="https://www.instagram.com/sssorda_" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
+            <p class="instagram-name">Sorda</p>
         </div>
         <div class="instagram-item">
-        <a href="https://www.instagram.com/yntr0" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
-        <p class="instagram-name">Yntr0</p>
+            <a href="https://www.instagram.com/yntr0" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
+            <p class="instagram-name">Yntr0</p>
         </div>
         <div class="instagram-item">
-        <a href="https://www.instagram.com/manuel.mp5" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
-        <p class="instagram-name">Manuel</p>
-        </div>
-            <div class="instagram-item">
-        <a href="https://www.instagram.com/_.gi0gi0" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
-        <p class="instagram-name">GioGio"</p>
+            <a href="https://www.instagram.com/manuel.mp5" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
+            <p class="instagram-name">Manuel</p>
         </div>
         <div class="instagram-item">
-        <a href="https://www.instagram.com/tatiana_zanca" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
-        <p class="instagram-name">Tat</p>
+            <a href="https://www.instagram.com/_.gi0gi0" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
+            <p class="instagram-name">GioGio</p>
         </div>
         <div class="instagram-item">
-        <a href="https://www.instagram.com/dwmenico" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
-        <p class="instagram-name">Dwme</p>
+            <a href="https://www.instagram.com/tatiana_zanca" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
+            <p class="instagram-name">Tat</p>
         </div>
         <div class="instagram-item">
-        <a href="https://www.instagram.com/albaonthebeat" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
-        <p class="instagram-name">Alba</p>
-    </div>
-    
+            <a href="https://www.instagram.com/dwmenico" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
+            <p class="instagram-name">Dwme</p>
+        </div>
+        <div class="instagram-item">
+            <a href="https://www.instagram.com/albaonthebeat" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
+            <p class="instagram-name">Alba</p>
+        </div>
     </div>
 
     <div class="link-container">
@@ -131,13 +145,53 @@
         <a href="https://www.instagram.com/westlodi/" target="_blank">Apri la mia pagina</a>
     </div>
 
+    <!-- Bottoni extra -->
+    <button class="download-btn" onclick="downloadQRCode()">Scarica QR Code</button>
+    <button class="copy-btn" onclick="copyLink()">Copia Link</button>
+    <button class="download-btn" onclick="downloadAudio()">Scarica Brano</button>
+
     <script>
         // Genera il QR Code fisso
-        new QRCode(document.getElementById("qrcode"), {
-            text: "https://www.instagram.com/westlodi/",  // Sostituisci con il tuo link fisso
+        let qrcodeContainer = document.getElementById("qrcode");
+        let qr = new QRCode(qrcodeContainer, {
+            text: "https://www.instagram.com/westlodi/",
             width: 200,
             height: 200
         });
+
+        // Funzione per scaricare il QR Code
+        function downloadQRCode() {
+            let qrCanvas = qrcodeContainer.querySelector("canvas");
+            let qrDataUrl = qrCanvas.toDataURL("image/png");
+
+            let downloadLink = document.createElement("a");
+            downloadLink.href = qrDataUrl;
+            downloadLink.download = "QR_WEST_LODI.png";
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        }
+
+        // Funzione per copiare il link negli appunti
+        function copyLink() {
+            let tempInput = document.createElement("input");
+            tempInput.value = "https://www.instagram.com/westlodi/";
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("Link copiato!");
+        }
+
+        // Funzione per scaricare il brano
+        function downloadAudio() {
+            let audioLink = document.createElement("a");
+            audioLink.href = "audio.mp3"; // Sostituisci con il nome corretto del file
+            audioLink.download = "brano.mp3"; // Nome del file scaricato
+            document.body.appendChild(audioLink);
+            audioLink.click();
+            document.body.removeChild(audioLink);
+        }
     </script>
 
 </body>
